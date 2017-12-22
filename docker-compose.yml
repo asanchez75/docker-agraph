@@ -1,0 +1,11 @@
+version: '3'
+services:
+    ag:
+        build: .
+        shm_size: 1g
+        volumes:
+            - "./data:/data-ag"
+        ports:
+            - "30000-30035:10000-10035"
+        restart: always
+        privileged: true

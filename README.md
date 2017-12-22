@@ -1,6 +1,8 @@
 Docker AllegroGraph
 ===================
 
+This forked version makes data persistence.
+
 Table of contents
 -----------------
 
@@ -40,6 +42,15 @@ Configuration
 The AllegroGraph configuration `agraph.cfg`.  See the AllegroGraph
 documentation for more information on configuration options for
 AllegroGraph.
+
+
+Access
+-------------
+
+To use AG WebView browse to http://localhost:10035.
+If docker-compose is used, see docker-compose.yml for alternative ports.
+The default user name and password is test and xyzzy.
+See https://franz.com/agraph/docker/ for more information.
 
 Documentation
 -------------
