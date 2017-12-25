@@ -6,6 +6,6 @@ services:
         volumes:
             - "./data:/data"
         ports:
-            - "30000-30035:10000-10035"
+            - "10000-10035:10000-10035"
         restart: always
         privileged: true
