@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+# Copying data
+cp -a /data-ag/. /data/
+
 # Make sure shared memory requirements are met.
 shm_size=$(df -P /dev/shm | grep -v Filesystem | awk '{print $2}')
 
@@ -22,8 +25,7 @@ trap "echo Caught signal; terminate" SIGINT SIGTERM SIGQUIT
 
 # Start AllegroGraph daemon
 /app/agraph/bin/agraph-control --config /data/etc/agraph.cfg start
-# Copying data
-cp -a /data/. /data-ag/
+
 # Monitor the logfile.
 # This pattern (& to put the process in the background and
 # then blocking using 'wait') appears to be the most reliable

@@ -28,6 +28,8 @@ RUN pushd agraph-$__FINAL_VERSION__ && \
     && popd && rm -r agraph-$__FINAL_VERSION__
 # Augment the config with a SessionPorts directive
 RUN echo "SessionPorts 10000-10034" >> /data/etc/agraph.cfg
+# Copying data
+RUN cp -a /data/. /data-ag/
 
 VOLUME /data
 
