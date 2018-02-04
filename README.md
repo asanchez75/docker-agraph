@@ -3,6 +3,14 @@ Docker AllegroGraph
 
 This forked version makes data persistence.
 
+1) Add files load.py and setup.py to /data
+2) Some useful commands for loading data
+
+docker exec --user root -it 952c3aa997e8  bash -c "python /data/setup.py"
+docker exec -w /data -it 952c3aa997e8 su agraph -c 'python /data/load.py'
+docker exec --user agraph -w /data -it 952c3aa997e8  bash -c'python /data/load.py'
+
+
 Table of contents
 -----------------
 
